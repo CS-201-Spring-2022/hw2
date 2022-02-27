@@ -28,6 +28,8 @@ class Node(object):
     def __repr__(self) -> str:
         '''Returns the representation of this node.
 
+        Implement any representation that helps you debug.
+
         Parameters:
         - self: mandatory reference to this object
 
@@ -39,7 +41,7 @@ class Node(object):
     def __str__(self) -> str:
         '''Returns a string representation of this node.
 
-        See the given link for the difference between the __repr__ and __str__
+        See the link below for the difference between the __repr__ and __str__
         methods: https://www.geeksforgeeks.org/str-vs-repr-in-python/
 
         Parameters:
@@ -85,6 +87,19 @@ class Node(object):
         '''
         pass
 
+    def add_level(self, forward: Optional[Node] = None) -> None:
+        '''Adds a level to this node which points to forward.
+
+        Parameters:
+        - self: mandatory reference to this object
+        - forward: the node that this node will point to in the new level.
+
+        Returns:
+        None.
+        '''
+        pass
+
+
 class SkipList(object):
     '''A skiplist of nodes containing (key, value) pairs. Nodes are ordered
     according to keys. Keys are unique, reinserting an existing key overwrites
@@ -95,7 +110,7 @@ class SkipList(object):
     '''
 
     def __init__(self) -> None:
-        '''Construct emote skiplist.
+        '''Construct empty skiplist.
 
         Parameters:
         - self: mandatory reference to this object
@@ -134,7 +149,7 @@ class SkipList(object):
     def __str__(self) -> str:
         '''Returns a string representation of this skiplist.
 
-        See the given link for the difference between the __repr__ and __str__
+        See the link below for the difference between the __repr__ and __str__
         methods: https://www.geeksforgeeks.org/str-vs-repr-in-python/
 
         Parameters:

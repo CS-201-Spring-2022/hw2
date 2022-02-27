@@ -1,4 +1,4 @@
-from typing import List
+from typing import List, Optional
 from skiplist import SkipList
 
 
@@ -73,20 +73,20 @@ class Table(object):
         '''
         pass
 
-    def select_range(self, from: str, to: str) -> Optional[List[List[str]]]:
+    def select_range(self, start: str, end: str) -> Optional[List[List[str]]]:
         '''Returns the records corresponding to the keys in the range
-        [from,to] inclusive, None in case of error.
+        [start,end] inclusive, None in case of error.
 
-        An error occurs if no index has been created, from and to are not valid
-        keys in the index, or from is not less than to.
+        An error occurs if no index has been created, start or end is not a valid
+        key in the index, or start is not less than end.
 
         Parameters:
         - self: mandatory reference to this object
-        - from: the starting key value in the range of keys
-        - to: the ending key value in the range of keys
+        - start: the starting key value in the range of keys
+        - end: the ending key value in the range of keys
 
         Returns:
-        The records in the order of the keys in the range [from,to], None in
+        The records in the order of the keys in the range [start,end], None in
         case of error.
         '''
         pass
